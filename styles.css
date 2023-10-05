@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&family=Ubuntu&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url("pexels-steve-johnson-1170642.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 150px;
+}
+
+p{
+    font-weight: 500;
+    margin: 2px 20px;
+}
+
+.topic{
+    position: relative;
+    
+   font-weight: 700;
+   font-style: italic;
+}
+
+/* NAVBAR */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.logo {
+    font-size: 32px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.header i {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .header i {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar {
+        display: none;
+    }
+}
+
+
+
+/* CONTENT */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 200px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 300px;
+    width: 400px;
+    background-color: whitesmoke;
+    float: left;
+    transition: 0.3s;
+    
+}
+.box2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 300px;
+    width: 400px;
+    background-color: white;
+    float: right;
+    transition: 0.3s;
+}
+
+
+
+.box1:hover {
+    box-shadow: -20px 15px 20px rgba(0, 0, 0, 0.36);
+    transform: scale(1.01);
+  }
+
+.box2:hover {
+    box-shadow: -20px 15px 20px rgba(0, 0, 0, 0.36);
+    transform: scale(1.01);
+  }
+
+.container2{
+    
+    width: 75%;
+    min-height: 200px;
+    align-items: center;
+    background-color: whitesmoke;
+    display: flex;
+    transition: 0.3s;
+}
+
+.container2 img {
+    width: 300px;
+}
+
+@media screen and (max-width: 900px) {
+    .container2 img {
+        display: none;
+    }
+}
+
+.container2:hover{ 
+    box-shadow: -20px 15px 20px rgba(0, 0, 0, 0.36);
+    transform: scale(1.01);
+}
+
+.container3{
+    max-width: 1170px;
+    margin: auto;
+
+
+    
+}
+ul{
+    list-style: none;
+
+}
+.row{
+    display: flex;
+    flex-wrap:wrap;
+}
+.footer{
+    margin-top: 20px;
+    top:100%;
+    background-color: white;
+    width: 100%;
+    padding: 30px 20px;
+
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: Black;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: red ;
+    height: 2px;
+    box-sizing: border-box;
+    width: 0;
+    transition: 0.3s;
+}
+
+.footer-col h4:hover::before{
+    width: 50%;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition:all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: red;
+    padding-left: 8px;   
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: beige;
+    margin-right:0 10px 10px 0;
+    text-align: center;
+    line-height:40px ;
+    border-radius: 50px;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+    color:red;
+    background-color: white;
+
+}
+
+
+/* Responsive */
+
+@media(max-width:767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:574px){
+    .footer-col{
+        width: 100%;
+    }
+}
